@@ -1,10 +1,6 @@
 import React, { useContext } from "react";
 import { ArchiveCentral } from "./ArchiveCentral";
 
-
-
-
-
 function Cards({nome,valor}){
     return(
         <div>
@@ -17,7 +13,6 @@ function Cards({nome,valor}){
 // chamar esse no template
 
 
-
     function ListCards(){   
         const {dados, atualizarDados} = useContext(ArchiveCentral)
 
@@ -27,7 +22,6 @@ function Cards({nome,valor}){
                <Cards key={cards.id}
                nome={cards.nome}
                valor={cards.valor}
-               
                />   
             ))}
         </div>
