@@ -1,28 +1,29 @@
 import React, { useContext } from "react";
 import { ArchiveCentral } from "./ArchiveCentral";
 
-
 function Modifications() {
+    const { dados, atualizarDados } = useContext(ArchiveCentral);
 
-    const {dados, atualizarDados} = useContext(ArchiveCentral)
+    const teste = () => {
+        console.log(dados.propriedades[0].valor); // Antes da alteração
 
-    const teste = ()=>{
-        console.log(dados.TotalCards[0].valor)
-        atualizarDados(dados.TotalCards[0],{...dados.TotalCards[0],valor:{...dados.TotalCards[0].valor+200}})
-        console.log(dados.TotalCards[0].valor)
-    }
+        atualizarDados(0, {
+            ...dados.propriedades[0],
+            valor: dados.propriedades[0].valorCompra + 200,
+        });
 
+        console.log(dados.propriedades[0].valor); // Ainda será o antigo (estado não atualizado imediatamente)
+    };
 
     return (
         <div>
-            <button onClick={teste}>teste</button>
+            <button onClick={teste}>Teste</button>
 
             <h1>
-                {dados.id}
-                {dados.nome}
-                </h1>
+                {dados.propriedades[0].nome}: {dados.propriedades[0].valor}
+            </h1>
         </div>
-    )
+    );
 }
 
-export default Modifications
+export default Modifications;
