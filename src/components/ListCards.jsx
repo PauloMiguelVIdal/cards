@@ -3,7 +3,7 @@ import { ArchiveCentral } from "./ArchiveCentral";
 
 function Cards({nome,valorCompra,aluguel,casa1,casa2,casa3,casa4,hotel}){
     return(
-        <div className="bg-indigo-500">
+        <div className="bg-indigo-500 w-[200px] min-h-[110px] border-[20px]">
         <h3>{nome}</h3>
         <p>valor Compra:{valorCompra}</p>
         <p>aluguel:{aluguel}</p>
@@ -12,6 +12,7 @@ function Cards({nome,valorCompra,aluguel,casa1,casa2,casa3,casa4,hotel}){
         <p>3 casas:{casa3}</p>
         <p>4 casas:{casa4}</p>
         <p>hotel:{hotel}</p>
+        <br/>
         </div>
     )
 }
