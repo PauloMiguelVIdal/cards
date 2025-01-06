@@ -9,7 +9,7 @@ function Modifications() {
 
         atualizarDados(0, {
             ...dados.propriedades[0],
-            valor: dados.propriedades[0].valorCompra + 200,
+            proprietario: " sim"
         });
 
         console.log(dados.propriedades[0].valor); // Ainda será o antigo (estado não atualizado imediatamente)

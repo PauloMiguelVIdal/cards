@@ -11,9 +11,9 @@ function InterfaceCards() {
 
     return (
         <div>
+            <Modifications />
             <TemplateCards />
             <ArchiveCentral />
-            <Modifications />
             <ListCards/>
         </div>
     )
